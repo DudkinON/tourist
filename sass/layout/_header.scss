@@ -1,0 +1,137 @@
+.header {
+  height: 85vh;
+  background-image: linear-gradient(to right bottom, rgba($color-blue, 0.85), rgba($color-green, 0.9)), url(../img/header.jpg);
+  background-size: cover;
+  background-position: top;
+
+  position: relative;
+  color: $color-light;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+
+  @supports (clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+    height: 95vh;
+  }
+
+  &__logo-container {
+    padding: 4rem 0 0 4rem;
+    display: inline-block;
+  }
+
+  &__logo {
+    margin-right: 2rem;
+  }
+
+  &__logo-lable {
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  &__logo > svg {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-color: $color-light;
+    fill: $color-light;
+    filter: invert(1);
+  }
+
+  &__container {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+
+  &__title {
+    font-weight: 200;
+    font-size: 6.6rem;
+    letter-spacing: 2rem;
+    animation: moveInTop 1s ease-out 0.2s;
+    animation-fill-mode: backwards;
+  }
+
+  &__slogan {
+    padding: 0;
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 1.7rem;
+    margin-bottom: 6rem;
+  }
+
+  &__slogan--animation {
+    animation: appear 1s ease-out 1s;
+    animation-fill-mode: backwards;
+  }
+
+  &__svg-box {
+    width: 2.3rem;
+    display: inline-block;
+  }
+
+  @include mq(mobile-lg) {
+
+    &__title {
+      font-size: 6.5rem;
+      letter-spacing: 1rem;
+    }
+
+    &__slogan {
+      margin-bottom: 2.2rem;
+    }
+
+    & {
+      -webkit-clip-path: none;
+      clip-path: none;
+    }
+  }
+
+  @include mq(mobile-md) {
+
+    &__title {
+      font-size: 4rem;
+      letter-spacing: .3rem;
+      font-weight: 300;
+    }
+
+    &__logo-container {
+      padding: 3rem 0;
+      width: 20rem;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+    }
+
+    &__container {
+      height: 60vh;
+    }
+
+    &__slogan {
+      padding: 1.5rem;
+      font-weight: 300;
+      font-size: 1.6rem;
+      letter-spacing: .5rem;
+    }
+  }
+
+  @include mq(mobile-sm) {
+
+    &__title {
+      font-size: 3.3rem;
+      letter-spacing: .3rem;
+      font-weight: 300;
+    }
+
+    &__container {
+      height: 70vh;
+    }
+  }
+}
