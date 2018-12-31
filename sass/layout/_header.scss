@@ -1,5 +1,5 @@
 .header {
-  height: 85vh;
+  height: 70rem;
   background-image: linear-gradient(to right bottom, rgba($color-blue, 0.85), rgba($color-green, 0.9)), url(../img/header.jpg);
   background-size: cover;
   background-position: top;
@@ -7,7 +7,7 @@
   position: relative;
   color: $color-light;
   text-transform: uppercase;
-  backface-visibility: hidden;
+  //backface-visibility: hidden;
 
   @supports (clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%)) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
@@ -22,6 +22,10 @@
 
   &__logo {
     margin-right: 2rem;
+  }
+
+  &__box {
+    margin-top: 10rem;
   }
 
   &__logo-lable {
@@ -44,7 +48,6 @@
     position: relative;
     padding: 0;
     margin: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -75,6 +78,12 @@
   &__svg-box {
     width: 2.3rem;
     display: inline-block;
+  }
+
+  @media only screen and (max-height: 21.875em) {
+    &__box {
+      margin-top: 4rem;
+    }
   }
 
   @include mq(mobile-lg) {
