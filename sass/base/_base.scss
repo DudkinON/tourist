@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+
+  font-size: 62.5%;
+
+  @include mq(desktop-lg) {
+    font-size: 100%;
+  }
+
+  @include mq(desktop-md) {
+    font-size: 62.5%;
+  }
+
+  @include mq(desktop-sm) {
+    font-size: 56.25%;
+  }
+
+  @include mq(mobile-lg) {
+    font-size: 50%;
+  }
+
+  @include mq(mobile-md) {
+    font-size: 50%;
+  }
+
+  @include mq(mobile-sm) {
+    font-size: 50%
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+::selection {
+  background-color: $color-dark-gray;
+  color: $color-light;
+}
