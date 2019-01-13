@@ -1,0 +1,96 @@
+.btn {
+
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 4rem;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: inherit;
+    font: inherit;
+
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.6rem 1rem rgba($color-black, 0.2);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(0.1rem);
+    box-shadow: 0 0.3rem 0.6rem rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-light;
+    color: $color-gray;
+
+    &::after {
+      background-color: $color-light;
+    }
+  }
+
+  &--green {
+    background-color: $color-green;
+    color: $color-light;
+
+    &::after {
+      background-color: $color-green;
+    }
+  }
+
+
+  &--move-in-bottom {
+    animation: moveInBottom 1s ease-out 1.8s;
+    animation-fill-mode: backwards;
+  }
+
+  &--blur-animation {
+
+    &::after {
+      content: "";
+      display: inline-block;
+      border-radius: 10rem;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+
+    &:hover::after {
+      transform: scaleX(1.8) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+}
+
+.btn-text {
+  text-transform: uppercase;
+  border-bottom: 1px solid inherit;
+  border-top: 1px solid inherit;
+  padding: 0 15px;
+  color: $color-green;
+  transition: 0.3s;
+
+  &:link, &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    padding: 10px 15px;
+    color: $color-blue;
+    border-bottom: 1px solid $color-blue;
+    border-top: 1px solid $color-blue;
+  }
+}
