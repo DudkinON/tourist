@@ -1,0 +1,132 @@
+.card {
+  perspective: 160rem;
+  -moz-perspective: 160rem;
+  transform-style: preserve-3d;
+
+  &__container {
+    transition: 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  &,
+  &__side {
+    height: 52rem;
+    width: 32rem;
+  }
+
+  &__side {
+    backface-visibility: hidden;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: .4rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    overflow: hidden;
+
+    &--front {
+      z-index: 2;
+      transform: rotateY(0deg);
+      background-color: $color-light;
+    }
+
+    &--back {
+      background-color: $color-green;
+      transform: rotateY(-180deg);
+      color: $color-light;
+      background-size: cover;
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  // Front site styles
+  &__image {
+    height: 23rem;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  &__header {
+    font-size: 2.3rem;
+    font-weight: 300;
+    text-align: right;
+    text-transform: uppercase;
+    color: $color-light;
+    position: absolute;
+    top: 13rem;
+    right: 2rem;
+    text-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+  }
+
+  &__details {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-light-gray-2;
+        }
+      }
+    }
+  }
+
+  // Back site styles
+
+  &__back-side {
+    @include centered;
+    text-align: center;
+    width: 90%;
+  }
+
+  &__price-container {
+    color: $color-light;
+    margin-bottom: 8rem;
+    text-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+  }
+
+  &__price-text {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+
+  @include mq(mobile-sm) {
+
+    &__header {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+
+  @media only screen and (hover: none) {
+    &:active &__side--front {
+      transform: rotateY(180deg);
+    }
+
+    &:active &__side--back {
+      transform: rotateY(0deg);
+    }
+  }
+}
