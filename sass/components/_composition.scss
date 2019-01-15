@@ -1,0 +1,84 @@
+.composition {
+  position: relative;
+  margin-top: 2rem;
+  margin-left: 1rem;
+
+  &__image {
+
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    border-radius: .4rem;
+    position: absolute;
+    transition: all .2s;
+    outline-offset: 2rem;
+
+    &--one {
+      left: 0;
+      top: -2rem;
+
+      @include mq(mobile-md) {
+        top: 0;
+      }
+    }
+
+    &--two {
+      right: 0;
+      top: 2.5rem;
+
+      @include mq(mobile-md) {
+        top: -2rem;
+      }
+    }
+
+    &--three {
+      left: 20%;
+      top: 10rem;
+
+      @include mq(mobile-md) {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &:hover {
+      outline: .1rem solid $color-green-light;
+      transform: scale(1.05);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+      z-index: 20;
+
+      &:hover {
+        + span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &:hover &__image:not(:hover) {
+    transform: scale(.9);
+    opacity: .7;
+  }
+
+  &__text-block {
+    z-index: 21;
+    color: $color-green;
+    position: absolute;
+    font-size: 2rem;
+    right: 0;
+    top: -3rem;
+    text-transform: uppercase;
+    display: none;
+  }
+
+  @include mq(mobile-md) {
+
+    margin: 1rem;
+
+    &__image {
+      margin-top: 3rem;
+      width: 33.33333333%;
+      float: left;
+      position: relative;
+    }
+  }
+}
