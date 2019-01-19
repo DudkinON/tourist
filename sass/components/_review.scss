@@ -1,0 +1,155 @@
+.review {
+
+  &__container {
+    width: 75%;
+    min-height: 25rem;
+    margin: 1rem auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    border-radius: 4px;
+    padding: 6rem;
+    padding-left: 9rem;
+    transform: skewX(-12deg);
+    background-color: rgba($color-light, .6);
+  }
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateX(-3rem) skewX(12deg) translateZ(0);
+    position: relative;
+    border-radius: 50%;
+
+    @supports (-webkit-clip-path: circle(50% at 50% 50%)) or (clip-path: circle(50% at 50% 50%)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+    }
+  }
+
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  &__image {
+    transform: scale(1);
+    backface-visibility: hidden;
+    transition: all .5s;
+    border-radius: 50%;
+  }
+
+  &__text {
+    transform: skewX(12deg) translateZ(0);
+    backface-visibility: hidden;
+    -webkit-filter: blur(0);
+  }
+
+  &__client-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-light;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden;
+    text-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+  }
+
+  &__container:hover &__client-name {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &__container:hover &__image {
+    transform: scale(1.1);
+    filter: blur(.5rem) brightness(70%);
+  }
+
+  &__icon {
+    color: $color-blue;
+  }
+
+  @include mq(mobile-lg) {
+
+    &__container {
+      transform: skewX(-6deg);
+    }
+
+    &__shape {
+      transform: translateX(-3rem) skewX(6deg);
+    }
+
+    &__text {
+      transform: skewX(6deg);
+    }
+  }
+
+  @include mq(mobile-md) {
+
+    &__container {
+      padding: 4rem;
+      transform: none;
+      width: 90%;
+    }
+
+    &__text {
+      transform: none;
+      float: none;
+      width: 100%;
+      text-align: center;
+      display: block;
+    }
+
+    &__client-name {
+      transform: none;
+    }
+
+    &__shape {
+      width: 12rem;
+      height: 12rem;
+      transform: none;
+      display: block;
+      background-color: transparent;
+      margin: 0 auto;
+      float: none;
+      -webkit-shape-outside: none;
+      shape-outside: none;
+      -webkit-clip-path: none;
+      clip-path: none;
+      transform: none;
+    }
+
+    &__text {
+      transform: none;
+    }
+
+    &__image {
+      transform: none;
+      backface-visibility: hidden;
+      transition: all .5s;
+      border-radius: 50%;
+    }
+  }
+
+
+  @include mq(mobile-md) {
+
+    &__container {
+      padding: 3rem;
+      width: 95%;
+    }
+
+    &__header {
+      margin-top: 3rem;
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+  }
+}
