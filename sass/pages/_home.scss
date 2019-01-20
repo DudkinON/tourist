@@ -1,0 +1,148 @@
+.about {
+  background: $color-light-gray;
+  padding: 25% 0;
+  margin-top: -25%;
+
+  @include mq(desktop-lg) {
+    padding: 25% 5%;
+  }
+
+  @include mq(mobile-lg) {
+    padding: 5rem 5%;
+    margin-top: 0;
+  }
+
+  @include mq(mobile-md) {
+    margin-top: 0;
+    padding-bottom: 5rem !important;
+    padding-top: 0 !important;
+    display: block;
+
+    &__mobile {
+      min-width: 100% !important;
+      flex: none !important;
+      max-width: 100% !important;
+      width: 100%;
+      display: block;
+    }
+
+    &__mobile-btn {
+      margin: 2rem auto;
+      display: inline-block;
+    }
+  }
+}
+
+.features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+                  to right bottom,
+                  rgba($color-blue, 0.8),
+                  rgba($color-green, 0.8)),
+  url(../../img/feautures_bg.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  @include mq(mobile-lg) {
+    padding: 6rem 0;
+    margin-top: 0;
+    display: block;
+
+    & {
+      transform: none;
+    }
+
+    & > * {
+      transform: none;
+    }
+  }
+}
+
+.tours {
+  background-color: $color-light-gray;
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem;
+
+  &__icon {
+    color: $color-yellow;
+  }
+
+  &__container {
+    display: table;
+    margin: 0 auto;
+  }
+
+  &__block {
+    margin: 2rem;
+    display: inline-block;
+  }
+
+  @media only screen and (max-width: 58.125em) {
+
+    &__one-col {
+      max-width: none !important;
+      margin: 1rem auto !important;
+    }
+  };
+
+  @include mq(desktop-lg) {
+    padding: 15% 5%;
+    padding-bottom: 3%;
+  }
+
+  @include mq(mobile-lg) {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  @include mq(mobile-lg) {
+
+    &__container {
+      display: block;
+      margin: 0;
+      padding: 3rem 0;
+    }
+
+    &__block {
+      margin: 0 auto;
+      padding: 2rem;
+
+      display: table;
+    }
+  }
+}
+
+.review {
+  padding: 15rem 0;
+  position: relative;
+
+  @include mq(desktop-lg) {
+    padding: 5%;
+  }
+
+  @include mq(mobile-lg) {
+    padding: 0 !important;
+  }
+}
+
+.booking {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, $color-blue, $color-green);
+
+  @include mq(desktop-lg) {
+    padding: 15% 5%;
+  }
+
+  @include mq(mobile-lg) {
+    padding: 10rem 0 !important;
+  }
+
+  @include mq(mobile-sm) {
+    padding: 3rem 0 !important;
+  }
+}
