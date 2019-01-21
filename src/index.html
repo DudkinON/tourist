@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,700,900">
-  <link rel="stylesheet" href="css/icons.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.min.css">
   <title>Traveler - Home Page</title>
 </head>
 <body>
@@ -45,7 +43,7 @@
       <span class="header__logo-lable">Brand</span>
     </span>
   <div class="header__container">
-      <div id="">
+      <div class="header__box">
         <h1 class="header__title">choose a place</h1>
         <div class="header__slogan header__slogan--animation">where you can be happy</div>
         <a href="#tours" class="btn btn--white btn--blur-animation btn--move-in-bottom">show me</a>
@@ -118,139 +116,139 @@
     </div>
   </section>
   <section class="tours" id="tours">
-    <div class="row">
-      <div class="col-12 text-center pt5 pb4">
-        <h2 class="h2 upper text-header">Popular tours</h2>
-      </div>
-      <div class="col-4">
+    <div class="tours__container">
+      <div class="tours__block">
         <div class="card">
-          <div class="card__side card__side--front">
-            <!-- Dynamic gradient and image -->
-            <div class="card__image"
-                 style="background-image: linear-gradient(to right bottom,
-              rgba(51, 255, 0, 0.3), 
-              rgba(48, 255, 176, 0.4)), 
+          <div class="card__container">
+            <div class="card__side card__side--front">
+              <!-- Dynamic gradient and image -->
+              <div class="card__image"
+                   style="background-image: linear-gradient(to right bottom,
+              rgba(51, 255, 0, 0.3),
+              rgba(48, 255, 176, 0.4)),
               url(img/forest_camp.jpg)"
-            ></div>
-            <h4 class="card__header">Hike the trails</h4>
-            <div class="card__details">
-              <ul class="text-center">
-                <li>from 1 day</li>
-                <li>
-                  <span>hotel (optional)</span>
-                  <i class="tours__icon icon-basic-star"></i>
-                  <i class="tours__icon icon-basic-star"></i>
-                  <i class="tours__icon icon-basic-star"></i>
-                </li>
-                <li>electric</li>
-                <li>Internet</li>
-                <li>water</li>
-              </ul>
+              ></div>
+              <h4 class="card__header">Hike the trails</h4>
+              <div class="card__details">
+                <ul class="text-center">
+                  <li>from 1 day</li>
+                  <li>
+                    <span>hotel (optional)</span>
+                    <i class="tours__icon icon-basic-star"></i>
+                    <i class="tours__icon icon-basic-star"></i>
+                    <i class="tours__icon icon-basic-star"></i>
+                  </li>
+                  <li>electric</li>
+                  <li>Internet</li>
+                  <li>water</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="card__side card__side--back"
-               style="background-image: linear-gradient(to right bottom,
-               rgba(51, 255, 0, 0.3), 
-              rgba(48, 255, 176, 0.4)), 
+            <div class="card__side card__side--back"
+                 style="background-image: linear-gradient(to right bottom,
+               rgba(51, 255, 0, 0.3),
+              rgba(48, 255, 176, 0.4)),
               url(img/forest_2.jpg)">
-            <div class="card__back-side">
-              <div class="card__price-container">
-                <p class="card__price-text">from</p>
-                <p class="card__price-value">$29</p>
+              <div class="card__back-side">
+                <div class="card__price-container">
+                  <p class="card__price-text">from</p>
+                  <p class="card__price-value">$29</p>
+                </div>
+                <a href="#camping-modal"
+                   class="btn btn--white btn--blur-animation">book now</a>
               </div>
-              <a href="#camping-modal"
-                 class="btn btn--white btn--blur-animation">book now</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="tours__block">
         <div class="card">
-          <div class="card__side card__side--front">
-            <!-- Dynamic gradient and image -->
-            <div class="card__image"
-                 style="background-image: linear-gradient(to right bottom,
-              rgba(255, 196, 0, 0.4), 
-              rgba(248, 174, 14, 0.6)), 
+          <div class="card__container">
+            <div class="card__side card__side--front">
+              <!-- Dynamic gradient and image -->
+              <div class="card__image"
+                   style="background-image: linear-gradient(to right bottom,
+              rgba(255, 196, 0, 0.4),
+              rgba(248, 174, 14, 0.6)),
               url(img/beach_2.jpg)"
-            ></div>
-            <h4 class="card__header">Discover endless sea</h4>
-            <div class="card__details">
-              <ul class="text-center">
-                <li>from 3 days</li>
-                <li>
-                  <span>hotel</span>
-                  <i class="tours__icon icon-basic-star"></i>
-                  <i class="tours__icon icon-basic-star"></i>
-                  <i class="tours__icon icon-basic-star"></i>
-                </li>
-                <li>3 meals a day</li>
-                <li>children under 6 years free</li>
-                <li>special price</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Dynamic gradient and image -->
-          <div class="card__side card__side--back"
-               style="background-image: linear-gradient(to right bottom,
-              rgba(255, 196, 0, 0.4), 
-              rgba(248, 174, 14, 0.6)), 
-              url(img/surfing.jpg)">
-            <div class="card__back-side">
-              <div class="card__price-container">
-                <p class="card__price-text">from</p>
-                <p class="card__price-value">$199</p>
+              ></div>
+              <h4 class="card__header">Discover endless sea</h4>
+              <div class="card__details">
+                <ul class="text-center">
+                  <li>from 3 days</li>
+                  <li>
+                    <span>hotel</span>
+                    <i class="tours__icon icon-basic-star"></i>
+                    <i class="tours__icon icon-basic-star"></i>
+                    <i class="tours__icon icon-basic-star"></i>
+                  </li>
+                  <li>3 meals a day</li>
+                  <li>children under 6 years free</li>
+                  <li>special price</li>
+                </ul>
               </div>
-              <a href="#ocean-modal" class="btn btn--white btn--blur-animation">book now</a>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <div class="card__side card__side--front">
             <!-- Dynamic gradient and image -->
-            <div class="card__image"
+            <div class="card__side card__side--back"
                  style="background-image: linear-gradient(to right bottom,
-              rgba(0, 153, 255, 0.3), 
-              rgba(48, 255, 193, 0.6)), 
-              url(img/snow_mountain.jpg)"></div>
-            <h4 class="card__header">Climb to the top</h4>
-            <div class="card__details">
-              <ul class="text-center">
-                <li>from 1 day</li>
-                <li>
-                  <span>hotel</span>
-                  <i class="tours__icon icon-basic-star"></i>
-                  <i class="tours__icon icon-basic-star"></i>
-                  <i class="tours__icon icon-basic-star"></i>
-                  <i class="tours__icon icon-basic-star"></i>
-                  <i class="tours__icon icon-basic-star"></i>
-                </li>
-                <li>4 meals a day</li>
-                <li>equipment included</li>
-                <li>experienced instructors</li>
-              </ul>
-            </div>
-          </div>
-          <!-- Dynamic gradient and image -->
-          <div class="card__side card__side--back"
-               style="background-image: linear-gradient(to right bottom,
-              rgba(0, 153, 255, 0.3), 
-              rgba(48, 255, 193, 0.6)), 
-              url(img/snowboarding.jpg)">
-            <div class="card__back-side">
-              <div class="card__price-container">
-                <p class="card__price-text">from</p>
-                <p class="card__price-value">$499</p>
+              rgba(255, 196, 0, 0.4),
+              rgba(248, 174, 14, 0.6)),
+              url(img/surfing.jpg)">
+              <div class="card__back-side">
+                <div class="card__price-container">
+                  <p class="card__price-text">from</p>
+                  <p class="card__price-value">$199</p>
+                </div>
+                <a href="#ocean-modal" class="btn btn--white btn--blur-animation">book now</a>
               </div>
-              <a href="#mountains-modal" class="btn btn--white btn--blur-animation">book now</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-12 p5 text-center mt4">
-        <a href="#" class="btn btn--green btn--blur-animation">all tours</a>
+      <div class="tours__block">
+        <div class="card">
+          <div class="card__container">
+            <div class="card__side card__side--front">
+              <!-- Dynamic gradient and image -->
+              <div class="card__image"
+                   style="background-image: linear-gradient(to right bottom,
+              rgba(0, 153, 255, 0.3),
+              rgba(48, 255, 193, 0.6)),
+              url(img/snow_mountain.jpg)"></div>
+              <h4 class="card__header">Climb to the top</h4>
+              <div class="card__details">
+                <ul class="text-center">
+                  <li>from 1 day</li>
+                  <li>
+                    <span>hotel</span>
+                    <i class="tours__icon icon-basic-star"></i>
+                    <i class="tours__icon icon-basic-star"></i>
+                    <i class="tours__icon icon-basic-star"></i>
+                    <i class="tours__icon icon-basic-star"></i>
+                    <i class="tours__icon icon-basic-star"></i>
+                  </li>
+                  <li>4 meals a day</li>
+                  <li>equipment included</li>
+                  <li>experienced instructors</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Dynamic gradient and image -->
+            <div class="card__side card__side--back"
+                 style="background-image: linear-gradient(to right bottom,
+              rgba(0, 153, 255, 0.3),
+              rgba(48, 255, 193, 0.6)),
+              url(img/snowboarding.jpg)">
+              <div class="card__back-side">
+                <div class="card__price-container">
+                  <p class="card__price-text">from</p>
+                  <p class="card__price-value">$499</p>
+                </div>
+                <a href="#mountains-modal" class="btn btn--white btn--blur-animation">book now</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -282,7 +280,7 @@
               <i class="review__icon icon-basic-star"></i>
               <span class="pl1 review__title-mobile">I had the best weekend</span>
             </h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, minima maiores similique aut ipsam
+            <p class="review__text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, minima maiores similique aut ipsam
               explicabo nostrum numquam nemo sint sunt hic odio laborum laboriosam commodi harum!</p>
           </div>
         </div>
@@ -395,13 +393,16 @@
     <div class="col-12 footer__bottom-box">
       <div class="footer__copyright">
         <span class="py2">Build by </span>
-        <a href="https://github.com/DudkinON" class="footer__copyright-link">Oleg Dudkin</a>
+        <a href="https://github.com/DudkinON" target="_blank"
+           class="footer__copyright-link">Oleg Dudkin</a>
 
         <span class="py2">Copyright &copy; </span>
-        <a href="https://olegdudkin.com" class="footer__copyright-link">olegdudkin.com</a>
+        <a href="https://olegdudkin.com" target="_blank"
+           class="footer__copyright-link">olegdudkin.com</a>
 
         <span class="py2">License </span>
-        <a href="https://github.com/DudkinON/traveler" class="footer__copyright-link">MIT</a>
+        <a href="https://github.com/DudkinON/tourist/blob/web/LICENSE"
+           target="_blank" class="footer__copyright-link">MIT</a>
       </div>
     </div>
   </div>
