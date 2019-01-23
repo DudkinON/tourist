@@ -1,0 +1,74 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin blurfix {
+  transition: all .35s ease-in-out;
+  transform-origin: 50% 50%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+// Media queries
+/*
+Width of a screen
+$breakpoint values:
+- mobile-sm: 20em = 320px*
+- mobile-md: 36em = 576px*
+- mobile-lg: 48em = 768px*
+- desktop-sm: 62em = 992px*
+- desktop-md: 75em = 1200px*
+- desktop-lg: 112.5em = 1800px*
+--
+1em = 16px
+*/
+
+@mixin mq($breakpoint) {
+
+  @if $breakpoint == mobile-sm {
+    @media only screen and (max-width: 20em) {
+      @content
+    };
+  }
+
+  @if $breakpoint == mobile-md {
+    @media only screen and (max-width: 36em) {
+      @content
+    };
+  }
+
+  @if $breakpoint == mobile-lg {
+    @media only screen and (max-width: 48em) {
+      @content
+    };
+  }
+
+  @if $breakpoint == desktop-sm {
+    @media only screen and (max-width: 62em) {
+      @content
+    };
+  }
+
+  @if $breakpoint == desktop-md {
+    @media only screen and (max-width: 75em) {
+      @content
+    };
+  }
+
+  @if $breakpoint == desktop-lg {
+    @media only screen and (min-width: 112.5em) {
+      @content
+    };
+  }
+}
