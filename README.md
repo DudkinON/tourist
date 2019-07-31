@@ -1,7 +1,7 @@
 # Template for tours website
 
 ## Demo
-See live [DEMO](https://traveler.demos.olegdudkin.com/)
+See live [DEMO](https://traveler.olegdudkin.com/)
 
 
 [![demo](https://github.com/DudkinON/tourist/blob/master/responsive-web-design-traveler.jpg?raw=true)](https://traveler.demos.olegdudkin.com/)
